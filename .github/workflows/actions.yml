@@ -20,7 +20,6 @@ jobs:
           python-version: '3.13'
       - name: Set up Codon Python bridge
         run: |
-          pip install distutils
           find /usr | grep libpython
           export CODON_PYTHON=$(curl -L https://raw.githubusercontent.com/exaloop/codon/refs/heads/develop/test/python/find-python-library.py | python)
           echo "Found Python at: ${CODON_PYTHON}"
